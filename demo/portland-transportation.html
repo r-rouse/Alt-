@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portland Transportation & Mobility Report 2026</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #0284c7;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+    }
+
+    .banner {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 1.25rem 2rem;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .banner-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .banner p {
+      margin: 0.35rem 0 0;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .demo-instructions {
+      background: #eff6ff;
+      border: 2px dashed #3b82f6;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem auto 0;
+      max-width: 960px;
+      font-size: 0.92rem;
+    }
+
+    .demo-instructions h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      color: #1e40af;
+    }
+
+    .demo-instructions ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .demo-instructions li {
+      margin-bottom: 0.35rem;
+    }
+
+    .main-content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .report-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.25rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .report-card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: var(--primary);
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 0.6rem;
+    }
+
+    .image-wrapper {
+      margin: 1.25rem 0;
+      text-align: center;
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+    }
+
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .image-tag-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge-unfixed {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #f87171;
+    }
+
+    .badge-poor-demo {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #f59e0b;
+    }
+
+    .badge-decorative-demo {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+    }
+
+    figcaption {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .metadata-row {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .divider-wrap {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div class="banner-inner">
+      <h1>City of Portland Bureau of Transportation (PBOT)</h1>
+      <p>Annual Infrastructure & Active Transportation Mobility Report (2026)</p>
+    </div>
+  </header>
+
+  <div class="demo-instructions" role="region" aria-label="Demo Testing Guide">
+    <h2>🎯 PageGuide Conversational Vision Demo Instructions</h2>
+    <ol>
+      <li>
+        <strong>Before PageGuide:</strong> Turn on VoiceOver (<kbd>Cmd + F5</kbd> on macOS). Tab or navigate to the images below. Notice VoiceOver announces unhelpful labels: <em>"image"</em>, <em>"image"</em>, and <em>"chart, image"</em>.
+      </li>
+      <li>
+        <strong>Activate PageGuide:</strong> Click the PageGuide extension icon or open the Side Panel. PageGuide automatically scans the page and detects 4 images (1 good/decorative, 3 requiring accessibility assistance).
+      </li>
+      <li>
+        <strong>Converse with Image 2 (The Map):</strong> Focus or select Image 2. Ask: <em>"Describe this image"</em> or <em>"Tell me more"</em>. Then follow up: <em>"What's happening on the east side?"</em> or <em>"Does the route cross the river?"</em>.
+      </li>
+      <li>
+        <strong>Converse with Image 3 (The Chart):</strong> Focus or select Image 3. Ask: <em>"What does this chart show?"</em> and then <em>"What year was the worst?"</em>. PageGuide reads the trend and identifies the 2022 peak!
+      </li>
+      <li>
+        <strong>Screen Reader Augmentation (The Before/After Moment):</strong> Click <em>"⚡ Quick Alt"</em> on any image. Re-navigate to that image in VoiceOver. VoiceOver now reads the full, context-aware PageGuide description!
+      </li>
+    </ol>
+  </div>
+
+  <main class="main-content">
+
+    <!-- ARTICLE SECTION 1: STREET INFRASTRUCTURE (Image 1: Missing Alt) -->
+    <article class="report-card">
+      <div class="metadata-row">
+        <span>Published: February 2026</span>
+        <span>Division: Capital Infrastructure Projects</span>
+      </div>
+      <h2>Downtown Pedestrian & Protected Bikeway Corridor</h2>
+      <p>
+        The Portland Bureau of Transportation has completed installation of physical concrete-separated bicycle lanes along SW Broadway and Alder Street in downtown Portland. This corridor forms an essential connection for commuters traveling into the city center, separating high-volume vehicle traffic from active micro-mobility users.
+      </p>
+
+      <div class="image-wrapper">
+        <div>
+          <span class="image-tag-badge badge-unfixed">Image 1: Missing Alt Text in HTML</span>
+        </div>
+        <!-- INACCESSIBLE: Completely missing alt attribute -->
+        <img src="street-scene.svg" width="800" height="500">
+        <p style="font-size: 0.85rem; color: #64748b; margin: 0.4rem 0 0;">
+          SW Broadway protected bicycle facility facing north near Alder Street.
+        </p>
+      </div>
+
+      <p>
+        Street-level counters indicate a 34% increase in daily bike and e-scooter trips along SW Broadway since the concrete separators were installed. Pedestrian safety islands and signalized bike crossings have virtually eliminated right-hook conflicts at major downtown intersections.
+      </p>
+    </article>
+
+    <!-- ARTICLE SECTION 2: MAP (Image 2: Missing Alt) -->
+    <article class="report-card">
+      <h2>Eastside vs Westside Cycling Corridors</h2>
+      <p>
+        Active transportation infrastructure differs substantially between Portland's east and west quadrants. The Willamette River acts as a natural geographical divider, bridged by major car-free and multimodal crossing facilities including the Hawthorne Bridge and Tilikum Crossing.
+      </p>
+
+      <figure class="image-wrapper">
+        <div>
+          <span class="image-tag-badge badge-unfixed">Image 2: Complex Map with Missing Alt</span>
+        </div>
+        <!-- INACCESSIBLE: Completely missing alt attribute -->
+        <img src="bike-network-map.svg" width="800" height="550">
+        <figcaption>Figure 2: Citywide Active Transportation Network & Eastside Commuter Corridors</figcaption>
+      </figure>
+
+      <p>
+        The Central Eastside Industrial District continues to represent the highest concentration of bicycle commuter trips in the Pacific Northwest. Greenways along SE Clinton Street and SE Division Street feed thousands of daily riders westward onto the Hawthorne Bridge.
+      </p>
+    </article>
+
+    <!-- ARTICLE SECTION 3: CHART (Image 3: Poor Alt Text) -->
+    <article class="report-card">
+      <h2>Vision Zero Safety & Incident Trends (2020–2025)</h2>
+      <p>
+        Portland adopted its Vision Zero Action Plan to eliminate traffic fatalities and severe injuries on city streets. The multi-year data tracking system compiles verified collision statistics from the Portland Police Bureau and Oregon Department of Transportation.
+      </p>
+
+      <div class="image-wrapper">
+        <div>
+          <span class="image-tag-badge badge-poor-demo">Image 3: Poor Alt Text: alt="chart"</span>
+        </div>
+        <!-- INACCESSIBLE: Generic non-informative alt="chart" -->
+        <img src="collision-chart.svg" alt="chart" width="800" height="500">
+        <p style="font-size: 0.85rem; color: #64748b; margin: 0.4rem 0 0;">
+          Figure 3: Annual reported collision statistics spanning the 2020 to 2025 observation window.
+        </p>
+      </div>
+
+      <p>
+        Following an alarming peak in 2022 with 4,850 reported severe incidents, the city deployed automated speed radar cameras across outer arterial corridors. By 2025, annual collisions fell to 2,200—representing a 55% reduction from peak levels.
+      </p>
+    </article>
+
+    <!-- DECORATIVE DIVIDER (Image 4: Decorative with alt="") -->
+    <div class="divider-wrap">
+      <span class="image-tag-badge badge-decorative-demo">Image 4: Decorative (alt="" — PageGuide correctly leaves alone)</span>
+      <br>
+      <img src="decorative-divider.svg" alt="" role="presentation" width="600" height="40">
+    </div>
+
+    <!-- SUMMARY SECTION -->
+    <section class="report-card">
+      <h2>Conclusion and 2026 Priorities</h2>
+      <p>
+        PBOT's 2026 capital agenda prioritizes completing the Green Loop, expanding automated enforcement corridors into East Portland, and maintaining protected bike facilities through preventative sweeping and asphalt rehabilitation.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 City of Portland Bureau of Transportation. Provided for accessibility evaluation and demonstration.</p>
+  </footer>
+
+</body>
+</html>

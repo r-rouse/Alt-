@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+  <defs>
+    <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Map Grid -->
+  <rect x="0" y="0" width="800" height="550" fill="#f8fafc"/>
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="50" y1="0" x2="50" y2="550"/><line x1="100" y1="0" x2="100" y2="550"/>
+    <line x1="150" y1="0" x2="150" y2="550"/><line x1="200" y1="0" x2="200" y2="550"/>
+    <line x1="250" y1="0" x2="250" y2="550"/><line x1="300" y1="0" x2="300" y2="550"/>
+    <line x1="350" y1="0" x2="350" y2="550"/><line x1="400" y1="0" x2="400" y2="550"/>
+    <line x1="450" y1="0" x2="450" y2="550"/><line x1="500" y1="0" x2="500" y2="550"/>
+    <line x1="550" y1="0" x2="550" y2="550"/><line x1="600" y1="0" x2="600" y2="550"/>
+    <line x1="650" y1="0" x2="650" y2="550"/><line x1="700" y1="0" x2="700" y2="550"/>
+    <line x1="750" y1="0" x2="750" y2="550"/>
+    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/><line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="450" x2="800" y2="450"/><line x1="0" y1="500" x2="800" y2="500"/>
+  </g>
+
+  <!-- Title Banner -->
+  <rect x="20" y="15" width="460" height="48" rx="6" fill="#0f172a" filter="url(#shadow)"/>
+  <text x="35" y="44" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#38bdf8">PORTLAND ACTIVE TRANSPORTATION NETWORK</text>
+
+  <!-- Land Masses: Westside & Eastside -->
+  <!-- Willamette River Path (North to South) -->
+  <path d="M 280 0 C 310 120, 260 220, 290 320 C 320 420, 310 490, 330 550 L 390 550 C 370 490, 375 420, 345 320 C 320 220, 365 120, 340 0 Z" fill="url(#riverGrad)"/>
+
+  <text x="325" y="240" font-family="Arial, sans-serif" font-size="12" font-style="italic" font-weight="bold" fill="#ffffff" transform="rotate(78 325 240)">WILLAMETTE RIVER</text>
+
+  <!-- Region Labels -->
+  <rect x="50" y="90" width="160" height="30" rx="4" fill="#e2e8f0" opacity="0.9"/>
+  <text x="130" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">WESTSIDE / DOWNTOWN</text>
+
+  <rect x="500" y="90" width="170" height="30" rx="4" fill="#e2e8f0" opacity="0.9"/>
+  <text x="585" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">EASTSIDE BIKEWAYS</text>
+
+  <!-- Bridges Across River -->
+  <!-- Burnside Bridge -->
+  <line x1="280" y1="180" x2="350" y2="180" stroke="#64748b" stroke-width="8"/>
+  <text x="210" y="184" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#475569">Burnside Br.</text>
+
+  <!-- Hawthorne Bridge -->
+  <line x1="272" y1="260" x2="335" y2="260" stroke="#16a34a" stroke-width="8"/>
+  <text x="195" y="264" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#15803d">Hawthorne Br. (Bike)</text>
+
+  <!-- Tilikum Crossing -->
+  <line x1="295" y1="360" x2="350" y2="360" stroke="#0284c7" stroke-width="8"/>
+  <text x="200" y="364" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0369a1">Tilikum Crossing</text>
+
+  <!-- Westside Bike Lanes (Blue & Grey) -->
+  <path d="M 120 70 L 120 480" stroke="#94a3b8" stroke-width="4" stroke-dasharray="6,4"/>
+  <text x="125" y="460" font-family="Arial, sans-serif" font-size="9" fill="#64748b">SW Broadway</text>
+  <path d="M 170 120 L 170 420 L 295 360" stroke="#0284c7" stroke-width="4"/>
+  <path d="M 50 220 L 272 260" stroke="#16a34a" stroke-width="4"/>
+
+  <!-- Eastside Protected Corridors (High Concentration) -->
+  <!-- Hawthorne Boulevard Bikeway -->
+  <path d="M 335 260 L 520 260 L 760 260" stroke="#16a34a" stroke-width="6"/>
+  <text x="530" y="252" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#15803d">Hawthorne Blvd Protected Corridor</text>
+
+  <!-- Division Street Greenway -->
+  <path d="M 345 320 L 530 320 L 760 320" stroke="#16a34a" stroke-width="5"/>
+  <text x="530" y="312" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#15803d">SE Division Greenway</text>
+
+  <!-- Clinton Street Neighborhood Bikeway -->
+  <path d="M 350 360 L 540 360 L 760 360" stroke="#22c55e" stroke-width="4"/>
+  <text x="540" y="352" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#16a34a">SE Clinton Bikeway</text>
+
+  <!-- Eastside North-South Spine (7th Ave & 20th Ave) -->
+  <path d="M 450 140 L 450 490" stroke="#16a34a" stroke-width="5"/>
+  <text x="455" y="475" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#15803d">SE 7th Ave Spine</text>
+
+  <path d="M 640 140 L 640 490" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6,4"/>
+  <text x="645" y="475" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#d97706">SE 20th Ave (Planned Expansion)</text>
+
+  <!-- Highlighted Construction / High-Collision Eastside Zone -->
+  <rect x="360" y="210" width="140" height="180" rx="8" fill="#fef08a" opacity="0.35" stroke="#eab308" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="370" y="215" width="120" height="20" rx="3" fill="#ca8a04"/>
+  <text x="430" y="229" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">CENTRAL EASTSIDE ZONE</text>
+  <text x="430" y="380" font-family="Arial, sans-serif" font-size="9" font-style="italic" fill="#854d0e" text-anchor="middle">Heavy Commuter Flow</text>
+
+  <!-- Legend Box (Bottom Left) -->
+  <rect x="25" y="405" width="260" height="125" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="40" y="425" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">MAP LEGEND</text>
+  
+  <line x1="40" y1="445" x2="80" y2="445" stroke="#16a34a" stroke-width="5"/>
+  <text x="90" y="449" font-family="Arial, sans-serif" font-size="10" fill="#334155">Protected Green Bikeway (Active)</text>
+
+  <line x1="40" y1="470" x2="80" y2="470" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6,4"/>
+  <text x="90" y="474" font-family="Arial, sans-serif" font-size="10" fill="#334155">Planned Corridor Expansion (2026)</text>
+
+  <rect x="40" y="490" width="30" height="15" fill="#fef08a" stroke="#eab308" stroke-dasharray="3,3"/>
+  <text x="90" y="502" font-family="Arial, sans-serif" font-size="10" fill="#334155">High-Flow Eastside Commuter Hub</text>
+
+  <line x1="40" y1="520" x2="80" y2="520" stroke="#0284c7" stroke-width="4"/>
+  <text x="90" y="524" font-family="Arial, sans-serif" font-size="10" fill="#334155">Car-Free Transit Bridge (Tilikum)</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7eb5e6"/>
+      <stop offset="100%" stop-color="#cbe2f7"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d444d"/>
+      <stop offset="100%" stop-color="#24292e"/>
+    </linearGradient>
+    <linearGradient id="bikeLaneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="800" height="260" fill="url(#skyGrad)"/>
+
+  <!-- City Skyline / Buildings in Background -->
+  <rect x="40" y="70" width="110" height="190" fill="#475569"/>
+  <rect x="160" y="110" width="90" height="150" fill="#64748b"/>
+  <rect x="260" y="50" width="130" height="210" fill="#334155"/>
+  <rect x="400" y="90" width="100" height="170" fill="#475569"/>
+  <rect x="510" y="120" width="140" height="140" fill="#64748b"/>
+  <rect x="660" y="80" width="100" height="180" fill="#334155"/>
+
+  <!-- Building Windows -->
+  <g fill="#fef08a" opacity="0.75">
+    <rect x="60" y="90" width="14" height="18"/><rect x="85" y="90" width="14" height="18"/><rect x="110" y="90" width="14" height="18"/>
+    <rect x="60" y="120" width="14" height="18"/><rect x="85" y="120" width="14" height="18"/><rect x="110" y="120" width="14" height="18"/>
+    <rect x="280" y="70" width="16" height="22"/><rect x="310" y="70" width="16" height="22"/><rect x="340" y="70" width="16" height="22"/>
+    <rect x="280" y="105" width="16" height="22"/><rect x="310" y="105" width="16" height="22"/><rect x="340" y="105" width="16" height="22"/>
+    <rect x="680" y="100" width="16" height="20"/><rect x="710" y="100" width="16" height="20"/>
+  </g>
+
+  <!-- Sidewalk Background -->
+  <rect x="0" y="240" width="800" height="50" fill="#cbd5e1"/>
+
+  <!-- Street Roadway -->
+  <rect x="0" y="290" width="800" height="210" fill="url(#roadGrad)"/>
+
+  <!-- Protected Green Bicycle Lane -->
+  <rect x="0" y="340" width="800" height="85" fill="url(#bikeLaneGrad)"/>
+  <!-- Concrete Barrier Separators -->
+  <rect x="30" y="420" width="100" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="160" y="420" width="100" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="290" y="420" width="100" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="420" y="420" width="100" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="550" y="420" width="100" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="680" y="420" width="100" height="14" rx="3" fill="#e2e8f0"/>
+
+  <!-- Bicycle Stencil on Green Lane -->
+  <g stroke="#ffffff" stroke-width="4" fill="none" opacity="0.9">
+    <circle cx="120" cy="382" r="14"/>
+    <circle cx="165" cy="382" r="14"/>
+    <polyline points="120,382 142,382 154,363 135,363 120,382"/>
+    <polyline points="142,382 148,356 160,356"/>
+    <polyline points="165,382 154,363"/>
+    <line x1="130" y1="358" x2="140" y2="358"/>
+  </g>
+
+  <!-- Cyclist in Lane -->
+  <g transform="translate(420, 290)">
+    <!-- Wheels -->
+    <circle cx="40" cy="85" r="22" stroke="#ffffff" stroke-width="4" fill="none"/>
+    <circle cx="110" cy="85" r="22" stroke="#ffffff" stroke-width="4" fill="none"/>
+    <!-- Frame (Bright Orange) -->
+    <polyline points="40,85 75,85 92,55 60,55 40,85" stroke="#f97316" stroke-width="5" fill="none"/>
+    <line x1="75" y1="85" x2="84" y2="45" stroke="#f97316" stroke-width="5"/>
+    <line x1="110" y1="85" x2="92" y2="55" stroke="#f97316" stroke-width="5"/>
+    <!-- Handlebar & Seat -->
+    <line x1="88" y1="42" x2="100" y2="42" stroke="#334155" stroke-width="4"/>
+    <line x1="55" y1="48" x2="68" y2="48" stroke="#0f172a" stroke-width="6"/>
+    <!-- Rider -->
+    <circle cx="78" cy="18" r="10" fill="#fbcfe8"/> <!-- Head -->
+    <path d="M 70 8 Q 80 -2 88 6 L 85 14 Z" fill="#3b82f6"/> <!-- Helmet -->
+    <path d="M 72 28 L 62 55 L 75 75 L 75 85" stroke="#1e293b" stroke-width="7" fill="none" stroke-linecap="round"/> <!-- Legs -->
+    <path d="M 78 28 L 92 42" stroke="#ef4444" stroke-width="8" stroke-linecap="round"/> <!-- Torso (Red Jacket) -->
+    <path d="M 85 35 L 98 44" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/> <!-- Arm -->
+  </g>
+
+  <!-- Street Sign Post (SW Broadway & Alder St) -->
+  <rect x="710" y="160" width="8" height="150" fill="#94a3b8"/>
+  <rect x="640" y="170" width="130" height="26" rx="3" fill="#15803d"/>
+  <text x="705" y="188" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SW BROADWAY</text>
+
+  <!-- Trees along sidewalk -->
+  <circle cx="230" cy="220" r="35" fill="#16a34a"/>
+  <rect x="227" y="240" width="6" height="35" fill="#78350f"/>
+  <circle cx="590" cy="220" r="38" fill="#15803d"/>
+  <rect x="587" y="240" width="6" height="35" fill="#78350f"/>
+
+  <!-- Pedestrians walking on sidewalk -->
+  <g transform="translate(140, 215)">
+    <circle cx="10" cy="8" r="6" fill="#fed7aa"/>
+    <rect x="6" y="14" width="8" height="18" fill="#0284c7" rx="2"/>
+    <line x1="8" y1="32" x2="7" y2="48" stroke="#1e293b" stroke-width="3"/>
+    <line x1="12" y1="32" x2="14" y2="48" stroke="#1e293b" stroke-width="3"/>
+  </g>
+  <g transform="translate(170, 218)">
+    <circle cx="10" cy="8" r="5" fill="#fde68a"/>
+    <rect x="7" y="13" width="7" height="16" fill="#a855f7" rx="2"/>
+    <line x1="8" y1="29" x2="6" y2="44" stroke="#334155" stroke-width="3"/>
+    <line x1="11" y1="29" x2="13" y2="44" stroke="#334155" stroke-width="3"/>
+  </g>
+</svg>

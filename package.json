@@ -1,0 +1,28 @@
+{
+  "name": "pageguide",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agentic Chrome extension for blind and low-vision web navigation",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && echo 'Rebuild with npm run build after changes (or use npm run watch)'",
+    "watch": "node scripts/watch.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/build-extension-scripts.mjs",
+    "typecheck": "tsc --noEmit",
+    "demo": "npx --yes serve demo -p 5179"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "esbuild": "^0.23.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vite-plugin-static-copy": "^1.0.6"
+  }
+}

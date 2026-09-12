@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopLite — Cart & Checkout</title>
+    <style>
+      :root {
+        --bg: #f6f3ee;
+        --ink: #1c1917;
+        --accent: #0f766e;
+        --card: #ffffff;
+        --muted: #57534e;
+        --line: #d6d3d1;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #ecfdf5 0%, var(--bg) 40%);
+        color: var(--ink);
+        line-height: 1.45;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1.25rem;
+        background: #0f172a;
+        color: #f8fafc;
+      }
+      .brand { font-weight: 800; letter-spacing: 0.02em; }
+      .top-actions { display: flex; gap: 0.75rem; align-items: center; }
+      /* Intentionally inaccessible icon buttons */
+      .icon-btn {
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 8px;
+        background: #1e293b;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+      .icon-btn svg { width: 22px; height: 22px; fill: #f8fafc; }
+      .cart-meta { font-size: 0.85rem; color: #94a3b8; margin-left: 0.25rem; }
+      main { max-width: 920px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+      h1 { font-size: 1.75rem; margin: 0 0 1rem; }
+      .layout { display: grid; gap: 1.25rem; grid-template-columns: 1.4fr 1fr; }
+      @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 1rem 1.1rem;
+      }
+      .item { display: flex; gap: 0.85rem; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+      .item:last-child { border-bottom: 0; }
+      .thumb {
+        width: 64px;
+        height: 64px;
+        background: #ccfbf1;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+      }
+      .price { margin-left: auto; font-weight: 700; }
+      .muted { color: var(--muted); }
+      label.visually-hidden {
+        /* Intentionally NOT used — demo fields lack labels */
+      }
+      input[type="email"], input[type="text"] {
+        width: 100%;
+        padding: 0.65rem 0.7rem;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font: inherit;
+        margin: 0.35rem 0 0.85rem;
+      }
+      .totals p { display: flex; justify-content: space-between; margin: 0.35rem 0; }
+      .totals .total { font-size: 1.15rem; font-weight: 800; }
+      /* Clickable DIV pretending to be checkout — no role, no name, no tabindex */
+      .checkout-go {
+        margin-top: 1rem;
+        width: 100%;
+        height: 48px;
+        border-radius: 10px;
+        background: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+      }
+      .checkout-go svg { width: 28px; height: 28px; fill: white; }
+      .banner {
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        color: #9a3412;
+      }
+      footer { padding: 1.5rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
+      /* Broken heading hierarchy: h1 then h4 */
+      .promo h4 { margin: 0 0 0.35rem; }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">ShopLite</div>
+      <div class="top-actions">
+        <!-- MISSING accessible name: icon-only menu button -->
+        <button class="icon-btn" type="button" onclick="alert('Navigation menu would open')">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+          </svg>
+        </button>
+
+        <!-- MISSING accessible name: cart button with nearby "3 items" text -->
+        <button class="icon-btn" type="button" onclick="alert('Cart')">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.2 14h9.9c.8 0 1.5-.5 1.7-1.2L21 6H6.2L5.3 3H2v2h2l3.6 7.6L6.2 14c-.2.5 0 1.1.5 1.4.2.1.4.2.7.2z" />
+          </svg>
+        </button>
+        <span class="cart-meta">3 items</span>
+
+        <!-- MISSING alt text -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect fill='%230f766e' width='40' height='40' rx='8'/%3E%3Ctext x='50%25' y='55%25' fill='white' font-size='14' text-anchor='middle' font-family='sans-serif'%3ECart%3C/text%3E%3C/svg%3E" width="40" height="40" />
+      </div>
+    </header>
+
+    <main>
+      <div class="banner">
+        Demo page for PageGuide — intentionally inaccessible controls for before/after screen-reader testing.
+      </div>
+
+      <h1>Shopping Cart</h1>
+
+      <div class="layout">
+        <section class="card" aria-label="Your cart">
+          <!-- Broken hierarchy: skip to h4 -->
+          <div class="promo">
+            <h4>Members save 10% today</h4>
+            <p class="muted">Sign in at checkout to apply your member discount.</p>
+          </div>
+
+          <div class="item">
+            <div class="thumb" aria-hidden="true">👟</div>
+            <div>
+              <div><strong>Trail Runner Sneakers</strong></div>
+              <div class="muted">Size 10 · Blue</div>
+            </div>
+            <div class="price">$64.00</div>
+          </div>
+          <div class="item">
+            <div class="thumb" aria-hidden="true">🧦</div>
+            <div>
+              <div><strong>Merino Crew Socks</strong></div>
+              <div class="muted">3-pack</div>
+            </div>
+            <div class="price">$11.00</div>
+          </div>
+          <div class="item">
+            <div class="thumb" aria-hidden="true">🧢</div>
+            <div>
+              <div><strong>Everyday Cap</strong></div>
+              <div class="muted">Black</div>
+            </div>
+            <div class="price">$0.00</div>
+          </div>
+          <p class="muted">Promo: free cap with sneakers.</p>
+        </section>
+
+        <section class="card">
+          <h2>Order Summary</h2>
+
+          <form id="checkout-form" onsubmit="event.preventDefault(); alert('Submitted (demo)');">
+            <!-- MISSING form label — email field with only placeholder -->
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+
+            <!-- MISSING form label — promo code -->
+            <input type="text" name="promo" placeholder="Promo code" />
+
+            <div class="totals">
+              <p><span>Subtotal</span><span>$75.00</span></p>
+              <p><span>Shipping</span><span>$9.95</span></p>
+              <p class="total"><span>Total</span><span>$84.95</span></p>
+            </div>
+
+            <!-- NON-SEMANTIC interactive: clickable div, no role, no name, not keyboard accessible -->
+            <div class="checkout-go" onclick="document.getElementById('checkout-form').requestSubmit()">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 17l5-5-5-5v10zM4 4h2v16H4V4z" />
+              </svg>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      ShopLite demo · Not a real store · Built for PageGuide accessibility repair demo
+    </footer>
+  </body>
+</html>
